@@ -1,0 +1,6 @@
+Pages\AddCustomer\BankManagerPage.class
+Pages\Base\BasePage.class
+Common\Config.class
+Common\CommonAction.class
+Pages\AddCustomer\BankManagerData.class
+Pages\Customers\CustomersPage.class
