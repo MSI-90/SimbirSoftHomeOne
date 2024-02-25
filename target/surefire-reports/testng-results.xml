@@ -2,31 +2,35 @@
 <testng-results ignored="6" total="9" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-25T14:52:08 GMT+07:00" name="All Test Suite" finished-at="2024-02-25T14:52:13 GMT+07:00" duration-ms="4542">
+  <suite started-at="2024-02-25T17:05:46 GMT+07:00" name="All Test Suite" finished-at="2024-02-25T17:05:51 GMT+07:00" duration-ms="5349">
     <groups>
     </groups>
-    <test started-at="2024-02-25T14:52:08 GMT+07:00" name="CreateUser" finished-at="2024-02-25T14:52:12 GMT+07:00" duration-ms="4014">
+    <test started-at="2024-02-25T17:05:46 GMT+07:00" name="CreateUser" finished-at="2024-02-25T17:05:51 GMT+07:00" duration-ms="4856">
       <class name="tests.UserIsSet.UserIsSetTest">
-        <test-method signature="openBankPageAndCreateUser()[pri:0, instance:tests.UserIsSet.UserIsSetTest@10b687f2]" started-at="2024-02-25T14:52:08 GMT+07:00" name="openBankPageAndCreateUser" finished-at="2024-02-25T14:52:12 GMT+07:00" duration-ms="3877" status="PASS">
+        <test-method signature="openBankPageAndCreateUser()[pri:0, instance:tests.UserIsSet.UserIsSetTest@2ceca2ef]" started-at="2024-02-25T17:05:46 GMT+07:00" name="openBankPageAndCreateUser" finished-at="2024-02-25T17:05:51 GMT+07:00" duration-ms="4694" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBankPageAndCreateUser -->
       </class> <!-- tests.UserIsSet.UserIsSetTest -->
     </test> <!-- CreateUser -->
-    <test started-at="2024-02-25T14:52:12 GMT+07:00" name="SortNamesInList" finished-at="2024-02-25T14:52:12 GMT+07:00" duration-ms="177">
+    <test started-at="2024-02-25T17:05:51 GMT+07:00" name="SortNamesInList" finished-at="2024-02-25T17:05:51 GMT+07:00" duration-ms="162">
       <class name="tests.UserIsSet.UserIsSetTest">
-        <test-method signature="sortCustomersByFirstName()[pri:0, instance:tests.UserIsSet.UserIsSetTest@3913f206]" started-at="2024-02-25T14:52:12 GMT+07:00" name="sortCustomersByFirstName" finished-at="2024-02-25T14:52:12 GMT+07:00" duration-ms="174" status="PASS">
+        <test-method signature="sortCustomersByFirstName()[pri:0, instance:tests.UserIsSet.UserIsSetTest@54e43bfe]" started-at="2024-02-25T17:05:51 GMT+07:00" name="sortCustomersByFirstName" finished-at="2024-02-25T17:05:51 GMT+07:00" duration-ms="158" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sortCustomersByFirstName -->
       </class> <!-- tests.UserIsSet.UserIsSetTest -->
     </test> <!-- SortNamesInList -->
-    <test started-at="2024-02-25T14:52:12 GMT+07:00" name="DeleteUser" finished-at="2024-02-25T14:52:13 GMT+07:00" duration-ms="282">
+    <test started-at="2024-02-25T17:05:51 GMT+07:00" name="DeleteUser" finished-at="2024-02-25T17:05:51 GMT+07:00" duration-ms="286">
       <class name="tests.UserIsSet.UserIsSetTest">
-        <test-method signature="deleteUserFromTable()[pri:0, instance:tests.UserIsSet.UserIsSetTest@53d9826f]" started-at="2024-02-25T14:52:12 GMT+07:00" name="deleteUserFromTable" finished-at="2024-02-25T14:52:13 GMT+07:00" duration-ms="215" status="PASS">
+        <test-method signature="deleteUserFromTable()[pri:0, instance:tests.UserIsSet.UserIsSetTest@662e682a]" started-at="2024-02-25T17:05:51 GMT+07:00" name="deleteUserFromTable" finished-at="2024-02-25T17:05:51 GMT+07:00" duration-ms="212" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteUserFromTable -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:tests.UserIsSet.UserIsSetTest@662e682a]" started-at="2024-02-25T17:05:51 GMT+07:00" name="quit" finished-at="2024-02-25T17:05:52 GMT+07:00" duration-ms="295" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
       </class> <!-- tests.UserIsSet.UserIsSetTest -->
     </test> <!-- DeleteUser -->
   </suite> <!-- All Test Suite -->
