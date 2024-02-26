@@ -1,5 +1,6 @@
 package tests.UserIsSet;
 
+import Helpers.BankManage.DataClassForManagerPage;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import tests.Base.BaseTest;
@@ -16,7 +17,9 @@ public class UserIsSetTest extends BaseTest {
                 .enterFirstName()
                 .enterLastName()
                 .enterPostCode()
-                .submitButtonClick()
+                .submitButtonClick();
+
+        dataFormanager
                 .allertIsVisible();
 
         customerPage

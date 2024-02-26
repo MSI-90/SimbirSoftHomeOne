@@ -1,5 +1,6 @@
 package Pages.Customers;
 
+import Helpers.CustomerPage.DataClassFroCustomerPage;
 import Pages.Base.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,19 +9,18 @@ import org.testng.asserts.SoftAssert;
 
 import java.util.*;
 
-import static Pages.AddCustomer.BankManagerData.regData;
+import static Helpers.BankManage.DataClassForManagerPage.*;
+import static Helpers.CustomerPage.DataClassFroCustomerPage.*;
 
 public class CustomersPage extends BasePage {
     public CustomersPage(WebDriver driver) {
         super(driver);
     }
 
-    TreeSet<String> firstnames = new TreeSet<String>();
-
-    By customersButton = By.xpath("//button[@ng-class='btnClass3']");
-    By searchCustomerInput = By.xpath("//div[@class='input-group']//input[@type='text']");
-    By getInfoFromTable = By.xpath("//table//tbody//td");
-    By allRoutesFromTable = By.xpath("//table//tbody//tr");
+    private By customersButton = By.xpath("//button[@ng-class='btnClass3']");
+    private By searchCustomerInput = By.xpath("//div[@class='input-group']//input[@type='text']");
+    private By getInfoFromTable = By.xpath("//table//tbody//td");
+    private By allRoutesFromTable = By.xpath("//table//tbody//tr");
 
     public CustomersPage openCustomers(){
         driver.findElement(customersButton).click();
@@ -35,7 +35,8 @@ public class CustomersPage extends BasePage {
 
         List<WebElement> elements = driver.findElements(getInfoFromTable);
 
-        softAssert.assertEquals(elements.get(0).getText(), regData.get("firstName"), isCompleate(elements.get(0).getText(), regData.get("firstName")));
+        softAssert.assertEquals(elements.get(0).getText(), regData.get("firstName"),
+                DataClassFroCustomerPage.isCompleate(elements.get(0).getText(), regData.get("firstName")));
         return this;
     }
 
@@ -69,18 +70,9 @@ public class CustomersPage extends BasePage {
         return this;
     }
 
-    public int averageOfNames(){
-        int itemsSumm = firstnames.stream()
-                .mapToInt(String::length)
-                .sum();
-        int averageLength =  (int)Math.ceil((double) itemsSumm / firstnames.size());
-
-        return averageLength;
-    }
-
     public CustomersPage deleteUserFromTable(){
         SoftAssert softAssert = new SoftAssert();
-        int userId = averageOfNames();
+        int userId = averageOfnames;
 
         By buttonIdForDelete = By.xpath("//table//tbody//tr["+userId+"]//button");
         List<WebElement> elements = driver.findElements(buttonIdForDelete);
@@ -93,13 +85,5 @@ public class CustomersPage extends BasePage {
         }
 
         return this;
-    }
-
-    protected String isCompleate(String firstNameFromTable, String fromRegData){
-        String result = null;
-        if (!firstNameFromTable.equals(fromRegData)){
-            result = "Что-то не так, значение указаное пользователем при заполнении формы - " + fromRegData + " не пришло на сервер";
-        }
-        return result;
     }
 }
