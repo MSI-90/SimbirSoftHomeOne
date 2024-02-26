@@ -25,29 +25,25 @@ public class BankManagerPage extends BasePage {
         return this;
     }
 
-    public BankManagerPage enterFirstName(){
+    public BankManagerPage enterFirstName(String firstName){
         WebElement element = driver.findElement(firstNameInput);
         element.click();
-        String[] strFromDigit = DataClassForManagerPage.digitAsString;
-        String textForFirstname = DataClassForManagerPage.getString;
-        element.sendKeys(textForFirstname);
-        DataClassForManagerPage.regData.put("firstName", textForFirstname);
+        element.sendKeys(firstName);
+        DataClassForManagerPage.regData.put("firstName", firstName);
         return this;
     }
 
-    public BankManagerPage enterLastName(){
+    public BankManagerPage enterLastName(String lastName){
         WebElement element = driver.findElement(lastNameInput);
         element.click();
-        String lastName = "Dementorovich";
         element.sendKeys(lastName);
         DataClassForManagerPage.regData.put("lastName", lastName);
         return this;
     }
 
-    public BankManagerPage enterPostCode(){
+    public BankManagerPage enterPostCode(String postCode){
         WebElement element = driver.findElement(postalCode);
         element.click();
-        String postCode = DataClassForManagerPage.getStringFromDigit;
         element.sendKeys(postCode);
         DataClassForManagerPage.regData.put("postCode", postCode);
         return this;

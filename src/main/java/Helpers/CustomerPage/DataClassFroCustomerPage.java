@@ -1,12 +1,15 @@
 package Helpers.CustomerPage;
 
+import java.util.ArrayList;
 import java.util.TreeSet;
 
 public class DataClassFroCustomerPage {
-    public static TreeSet<String> firstnames = new TreeSet<String>();
+    public static ArrayList<String> firstnames = new ArrayList<String>();
+    public static ArrayList<String> firstNamesAfterSort = new ArrayList<String>();
+
     public static int averageOfnames = averageOfNames();
 
-    private static int averageOfNames(){
+    public static int averageOfNames(){
         int itemsSumm = firstnames.stream()
                 .mapToInt(String::length)
                 .sum();

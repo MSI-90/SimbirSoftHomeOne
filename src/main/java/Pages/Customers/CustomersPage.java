@@ -5,6 +5,7 @@ import Pages.Base.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
 import java.util.*;
@@ -19,6 +20,7 @@ public class CustomersPage extends BasePage {
 
     private By customersButton = By.xpath("//button[@ng-class='btnClass3']");
     private By searchCustomerInput = By.xpath("//div[@class='input-group']//input[@type='text']");
+    private By firstnameLink = By.xpath("//table//thead//tr//td[1]//a");
     private By getInfoFromTable = By.xpath("//table//tbody//td");
     private By allRoutesFromTable = By.xpath("//table//tbody//tr");
 
@@ -27,63 +29,109 @@ public class CustomersPage extends BasePage {
         return this;
     } //открыть страницу
 
-    public CustomersPage insertUserNameAsTextIntoInput(){
-        SoftAssert softAssert = new SoftAssert();
-        WebElement element = driver.findElement(searchCustomerInput);
-        element.click();
-        element.sendKeys(regData.get("firstName"));
+    /*
+    public WebElement insertUserNameAsTextIntoInput(String username){
+        if (username != null)
+        {
+            WebElement element = driver.findElement(searchCustomerInput);
+            element.click();
+            element.sendKeys(username);
 
-        List<WebElement> elements = driver.findElements(getInfoFromTable);
+            WebElement elementName = driver.findElements(getInfoFromTable).get(0);
 
-        softAssert.assertEquals(elements.get(0).getText(), regData.get("firstName"),
-                DataClassFroCustomerPage.isCompleate(elements.get(0).getText(), regData.get("firstName")));
-        return this;
+            return elementName;
+        }
+
+        return null;
+    }
+    */
+
+    public List<WebElement> insertUserNameAsTextIntoInput(String username){
+        List<WebElement> elements = new ArrayList<>();
+        if (username != null)
+        {
+            WebElement element = driver.findElement(searchCustomerInput);
+            element.click();
+            element.sendKeys(username);
+
+            elements = driver.findElements(getInfoFromTable);
+        }
+
+        return elements;
     }
 
-    // получить список имен
     public CustomersPage getAllCeills(){
-        SoftAssert softAssert = new SoftAssert();
         List<WebElement> elements = driver.findElements(allRoutesFromTable);
         int indexOfEmptySymbol = 0;
 
         if(elements.size() > 0){
+            firstnames.clear();
             for (WebElement element : elements){
                 indexOfEmptySymbol = element.getText().indexOf(" ");
                 firstnames.add((element.getText()).substring(0, indexOfEmptySymbol));
             }
         }
 
-        if (firstnames.size() == 0)
-            softAssert.fail("Список имен не получен");
-
         return this;
     }
 
-    public CustomersPage sortInListOfNames(boolean sortAscending){
-        if (sortAscending) {
-            firstnames.forEach(System.out::println);
-        } else {
-            TreeSet<String> descSort = new TreeSet<String>(Comparator.reverseOrder());
-            descSort.addAll(firstnames);
-            descSort.forEach(System.out::println);
+    public ArrayList<String> getSortCeills(boolean sortAscending){
+
+        firstNamesAfterSort.clear();
+        int indexOfEmptySymbol = 0;
+
+        if (!sortAscending){
+            WebElement firstNameLink = driver.findElement(firstnameLink);
+            firstNameLink.click();
+            List<WebElement> elements = driver.findElements(allRoutesFromTable);
+            if(elements.size() > 0){
+
+                for (WebElement element : elements){
+                    indexOfEmptySymbol = element.getText().indexOf(" ");
+                    firstNamesAfterSort.add((element.getText()).substring(0, indexOfEmptySymbol));
+                }
+            }
         }
-        return this;
+
+        if (sortAscending){
+            WebElement firstNameLink = driver.findElement(firstnameLink);
+            firstNameLink.click();
+            firstNameLink.click();
+            List<WebElement> elements = driver.findElements(allRoutesFromTable);
+            if(elements.size() > 0){
+
+                for (WebElement element : elements){
+                    indexOfEmptySymbol = element.getText().indexOf(" ");
+                    firstNamesAfterSort.add((element.getText()).substring(0, indexOfEmptySymbol));
+                }
+            }
+        }
+
+        return firstNamesAfterSort;
     }
 
-    public CustomersPage deleteUserFromTable(){
-        SoftAssert softAssert = new SoftAssert();
-        int userId = averageOfnames;
+    public ArrayList<String> sortInListOfNames(boolean sortAscending){
+        ArrayList<String> sortedNames = new ArrayList<>(firstnames);
 
+        if (sortAscending) {
+            Collections.sort(sortedNames, String.CASE_INSENSITIVE_ORDER);
+        } else {
+            Collections.sort(sortedNames, Collections.reverseOrder(String.CASE_INSENSITIVE_ORDER));
+        }
+        return sortedNames;
+    }
+
+    public CustomersPage deleteUserFromTable(int userId){
         By buttonIdForDelete = By.xpath("//table//tbody//tr["+userId+"]//button");
         List<WebElement> elements = driver.findElements(buttonIdForDelete);
 
         if (elements.size() == 0){
-            softAssert.fail("Нет элементов для удаления");
+            Assert.fail("Нет элементов для удаления");
         }
         else{
             elements.get(0).click();
         }
-
         return this;
     }
+
 }

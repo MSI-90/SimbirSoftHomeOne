@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="8.364" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="12.657" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="webdriver.chrome.driver" value="src/main/resources/chromedriver.exe"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="RU"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
-    <property name="sun.java.command" value="C:\Users\.NET\AppData\Local\Temp\surefire9036414335517405054\surefirebooter-20240225170543291_3.jar C:\Users\.NET\AppData\Local\Temp\surefire9036414335517405054 2024-02-25T17-05-43_161-jvmRun1 surefire-20240225170543291_1tmp surefire_0-20240225170543291_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\.NET\AppData\Local\Temp\surefire16717214784336596618\surefirebooter-20240227005909908_3.jar C:\Users\.NET\AppData\Local\Temp\surefire16717214784336596618 2024-02-27T00-59-09_774-jvmRun1 surefire-20240227005909908_1tmp surefire_0-20240227005909908_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="H:\UDEMY\Java\Обучение\new_test\target\test-classes;H:\UDEMY\Java\Обучение\new_test\target\classes;C:\Users\.NET\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\Users\.NET\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\Users\.NET\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\Users\.NET\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\Users\.NET\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\Users\.NET\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\Users\.NET\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\Users\.NET\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Users\.NET\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\.NET\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\Users\.NET\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\.NET\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Users\.NET\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Users\.NET\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\.NET\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\.NET\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\Users\.NET\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Users\.NET\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.141.59\selenium-chrome-driver-3.141.59.jar;C:\Users\.NET\.m2\repository\org\testng\testng\7.4.0\testng-7.4.0.jar;C:\Users\.NET\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar;C:\Users\.NET\.m2\repository\org\webjars\jquery\3.5.1\jquery-3.5.1.jar;C:\Users\.NET\.m2\repository\io\qameta\allure\allure-testng\2.14.0\allure-testng-2.14.0.jar;C:\Users\.NET\.m2\repository\io\qameta\allure\allure-java-commons\2.14.0\allure-java-commons-2.14.0.jar;C:\Users\.NET\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\.NET\.m2\repository\io\qameta\allure\allure-model\2.14.0\allure-model-2.14.0.jar;C:\Users\.NET\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.12.3\jackson-databind-2.12.3.jar;C:\Users\.NET\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.12.3\jackson-annotations-2.12.3.jar;C:\Users\.NET\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.12.3\jackson-core-2.12.3.jar;C:\Users\.NET\.m2\repository\org\apache\tika\tika-core\1.26\tika-core-1.26.jar;C:\Users\.NET\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\.NET\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\.NET\.m2\repository\javax\activation\activation\1.1.1\activation-1.1.1.jar;C:\Users\.NET\.m2\repository\org\jooq\joor-java-8\0.9.14\joor-java-8-0.9.14.jar;C:\Users\.NET\.m2\repository\io\qameta\allure\allure-test-filter\2.14.0\allure-test-filter-2.14.0.jar;C:\Users\.NET\.m2\repository\commons-io\commons-io\1.4\commons-io-1.4.jar;C:\Users\.NET\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\Users\.NET\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\.NET\AppData\Local\Temp\surefire9036414335517405054\surefirebooter-20240225170543291_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\.NET\AppData\Local\Temp\surefire16717214784336596618\surefirebooter-20240227005909908_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.9+11-LTS-201"/>
@@ -57,19 +57,19 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="openBankPageAndCreateUser" classname="tests.UserIsSet.UserIsSetTest" time="4.778">
+  <testcase name="openBankPageAndCreateUser" classname="tests.UserIsSet.UserIsSetTest" time="3.742">
     <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 24773
+Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 5687
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-февр. 25, 2024 5:05:46 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+февр. 27, 2024 12:59:12 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
   </testcase>
-  <testcase name="sortCustomersByFirstName" classname="tests.UserIsSet.UserIsSetTest" time="0.157">
+  <testcase name="sortCustomersByFirstName" classname="tests.UserIsSet.UserIsSetTest" time="0.809">
     <system-out><![CDATA[PASSED: openBankPageAndCreateUser
 
 ===============================================
@@ -79,7 +79,7 @@ INFO: Detected dialect: W3C
 
 ]]></system-out>
   </testcase>
-  <testcase name="deleteUserFromTable" classname="tests.UserIsSet.UserIsSetTest" time="0.282">
+  <testcase name="deleteUserFromTable" classname="tests.UserIsSet.UserIsSetTest" time="5.311">
     <system-out><![CDATA[PASSED: sortCustomersByFirstName
 
 ===============================================

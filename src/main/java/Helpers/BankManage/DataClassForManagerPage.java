@@ -8,11 +8,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class DataClassForManagerPage {
-    protected WebDriver driver;
-
-    public DataClassForManagerPage(WebDriver driver){
-        this.driver = driver;
-    }
 
     protected static final String[] englishLetters = {"a", "b", "c", "d", "e", "f", "j", "h", "i", "l", "k", "l", "m", "n", "o",
             "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
@@ -59,17 +54,5 @@ public class DataClassForManagerPage {
             }
         }
         return str;
-    }
-
-    public void allertIsVisible(){
-        SoftAssert softAssert = new SoftAssert();
-        String textFromAlert = "";
-        try{
-            Alert alert = driver.switchTo().alert();
-            textFromAlert = alert.getText();
-            alert.accept();
-        }catch (Exception ex){
-            softAssert.fail("Информация из формы не отправлена!");
-        }
     }
 }
