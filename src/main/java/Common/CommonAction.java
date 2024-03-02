@@ -2,6 +2,7 @@ package Common;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
@@ -24,6 +25,10 @@ public class CommonAction {
                     System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
                     driver = new ChromeDriver();
                     driverConfigs(driver);
+                    ChromeOptions options = new ChromeOptions();
+                    options.addArguments("--no-sandbox");
+                    options.addArguments("--disable-dev-shm-usage");
+                    options.addArguments("--headless");
                     break;
                 default:
                     softAssert.fail("incorrect platform or browser name " + PLATFORM_AND_BROWSER);
