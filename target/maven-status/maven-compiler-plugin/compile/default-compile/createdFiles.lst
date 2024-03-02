@@ -1,0 +1,8 @@
+Helpers\BankManage\DataClassForManagerPage.class
+Helpers\OutsidersClasses\Outsider.class
+Pages\AddCustomer\BankManagerPage.class
+Pages\Base\BasePage.class
+Helpers\CustomerPage\DataClassFroCustomerPage.class
+Common\Config.class
+Common\CommonAction.class
+Pages\Customers\CustomersPage.class
